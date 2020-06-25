@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		1998ECD124A30F33008EBE54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1998ECD024A30F33008EBE54 /* AppDelegate.swift */; };
 		1998ECD324A30F33008EBE54 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1998ECD224A30F33008EBE54 /* SceneDelegate.swift */; };
-		1998ECD524A30F33008EBE54 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1998ECD424A30F33008EBE54 /* ViewController.swift */; };
+		1998ECD524A30F33008EBE54 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1998ECD424A30F33008EBE54 /* MainViewController.swift */; };
 		1998ECD824A30F33008EBE54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1998ECD624A30F33008EBE54 /* Main.storyboard */; };
 		1998ECDA24A30F34008EBE54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1998ECD924A30F34008EBE54 /* Assets.xcassets */; };
 		1998ECDD24A30F34008EBE54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1998ECDB24A30F34008EBE54 /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		1998ECCD24A30F33008EBE54 /* Single View Weather Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Single View Weather Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1998ECD024A30F33008EBE54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1998ECD224A30F33008EBE54 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1998ECD424A30F33008EBE54 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1998ECD424A30F33008EBE54 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		1998ECD724A30F33008EBE54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1998ECD924A30F34008EBE54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1998ECDC24A30F34008EBE54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,15 +56,47 @@
 		1998ECCF24A30F33008EBE54 /* Single View Weather Test */ = {
 			isa = PBXGroup;
 			children = (
-				1998ECD024A30F33008EBE54 /* AppDelegate.swift */,
-				1998ECD224A30F33008EBE54 /* SceneDelegate.swift */,
-				1998ECD424A30F33008EBE54 /* ViewController.swift */,
-				1998ECD624A30F33008EBE54 /* Main.storyboard */,
-				1998ECD924A30F34008EBE54 /* Assets.xcassets */,
-				1998ECDB24A30F34008EBE54 /* LaunchScreen.storyboard */,
-				1998ECDE24A30F34008EBE54 /* Info.plist */,
+				1998ECE524A329DB008EBE54 /* Model */,
+				1998ECE724A32A25008EBE54 /* View */,
+				1998ECE624A329E9008EBE54 /* Controller */,
+				1998ECE424A329A2008EBE54 /* Supporting Files */,
 			);
 			path = "Single View Weather Test";
+			sourceTree = "<group>";
+		};
+		1998ECE424A329A2008EBE54 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1998ECD224A30F33008EBE54 /* SceneDelegate.swift */,
+				1998ECD924A30F34008EBE54 /* Assets.xcassets */,
+				1998ECD024A30F33008EBE54 /* AppDelegate.swift */,
+				1998ECDE24A30F34008EBE54 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1998ECE524A329DB008EBE54 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1998ECE624A329E9008EBE54 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1998ECD424A30F33008EBE54 /* MainViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1998ECE724A32A25008EBE54 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1998ECD624A30F33008EBE54 /* Main.storyboard */,
+				1998ECDB24A30F34008EBE54 /* LaunchScreen.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1998ECD524A30F33008EBE54 /* ViewController.swift in Sources */,
+				1998ECD524A30F33008EBE54 /* MainViewController.swift in Sources */,
 				1998ECD124A30F33008EBE54 /* AppDelegate.swift in Sources */,
 				1998ECD324A30F33008EBE54 /* SceneDelegate.swift in Sources */,
 			);

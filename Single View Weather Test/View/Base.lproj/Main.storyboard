@@ -15,41 +15,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="MRC-hp-Ajw">
+                                <rect key="frame" x="188.5" y="434.5" width="37" height="37"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="fc9-he-Pwk">
                                 <rect key="frame" x="25" y="54" width="364" height="798"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bvF-gN-k0b" userLabel="Top Stack View">
-                                        <rect key="frame" x="0.0" y="0.0" width="364" height="70"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="364" height="82"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="PGX-YD-iyv" userLabel="City Stack View">
-                                                <rect key="frame" x="0.0" y="0.0" width="364" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="364" height="36"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Омск" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhn-WH-5tH">
-                                                        <rect key="frame" x="0.0" y="0.0" width="125.5" height="30"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="199" height="36"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="right" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="lBf-EX-a9O">
-                                                        <rect key="frame" x="125.5" y="0.0" width="238.5" height="30"/>
+                                                        <rect key="frame" x="199" y="0.0" width="165" height="36"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="°" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFo-9f-Yvi">
-                                                                <rect key="frame" x="0.0" y="5" width="116.5" height="20.5"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="80" height="36"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="71i-KT-R0f">
-                                                                <rect key="frame" x="121.5" y="2.5" width="117" height="26"/>
+                                                            <segmentedControl opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="71i-KT-R0f">
+                                                                <rect key="frame" x="85" y="0.5" width="80" height="36"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="25" id="KkR-vb-CHv"/>
+                                                                    <constraint firstAttribute="width" constant="80" id="29T-i9-F0m"/>
+                                                                    <constraint firstAttribute="height" constant="35" id="KkR-vb-CHv"/>
                                                                 </constraints>
                                                                 <segments>
                                                                     <segment title="C"/>
                                                                     <segment title="F"/>
                                                                 </segments>
-                                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <color key="selectedSegmentTintColor" red="0.39719474319999998" green="0.56958860160000002" blue="0.74008744959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                                <color key="selectedSegmentTintColor" cocoaTouchSystemColor="lightTextColor"/>
                                                                 <connections>
                                                                     <action selector="changeDegree:" destination="BYZ-38-t0r" eventType="valueChanged" id="AzJ-Ra-aJ2"/>
                                                                 </connections>
@@ -58,11 +63,11 @@
                                                     </stackView>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="EYN-cp-A1r" userLabel="Search Stack View">
-                                                <rect key="frame" x="0.0" y="40" width="364" height="30"/>
+                                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="EYN-cp-A1r" userLabel="Search Stack View">
+                                                <rect key="frame" x="0.0" y="46" width="364" height="36"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E1y-9N-hfJ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="182" height="30"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="148.5" height="36"/>
                                                         <state key="normal" title="Сменить город">
                                                             <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
                                                         </state>
@@ -70,24 +75,33 @@
                                                             <action selector="changeCityBttn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a6F-73-Z0o"/>
                                                         </connections>
                                                     </button>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Мое местоположение" placeholder="Мое местоположение" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fTw-7y-Vep">
-                                                        <rect key="frame" x="182" y="0.0" width="182" height="30"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Мое местоположение" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fTw-7y-Vep">
+                                                        <rect key="frame" x="148.5" y="0.0" width="215.5" height="36"/>
                                                         <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                                                <color key="value" cocoaTouchSystemColor="lightTextColor"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="changeCityTextField:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="eyg-Km-SeD"/>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wM5-TL-8wY" userLabel="Main Info Stack View">
-                                        <rect key="frame" x="0.0" y="321.5" width="364" height="130.5"/>
+                                        <rect key="frame" x="0.0" y="324.5" width="364" height="130.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="aca-b0-nBi">
                                                 <rect key="frame" x="60.5" y="0.0" width="243" height="95.5"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud.bolt.rain" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="X9J-f5-GMG">
                                                         <rect key="frame" x="0.0" y="-3" width="108.5" height="105"/>
+                                                        <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="black"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14°" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jsN-f4-6nw">
@@ -211,16 +225,23 @@
                         <color key="backgroundColor" red="0.39719474315643311" green="0.56958860158920288" blue="0.74008744955062866" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="fc9-he-Pwk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="4WM-1W-9U1"/>
+                            <constraint firstItem="MRC-hp-Ajw" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="6ts-oD-GUh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fc9-he-Pwk" secondAttribute="trailing" constant="25" id="7gB-Yd-gj8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fc9-he-Pwk" secondAttribute="bottom" constant="10" id="8LL-wL-tn6"/>
                             <constraint firstItem="fc9-he-Pwk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="Jh5-ft-Avv"/>
+                            <constraint firstItem="MRC-hp-Ajw" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Zqe-su-lMm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="PressureLabel" destination="T1w-0c-aYs" id="IhB-g5-kEs"/>
+                        <outlet property="activityIndicator" destination="MRC-hp-Ajw" id="O37-Tj-CSs"/>
+                        <outlet property="bottomStackView" destination="HCa-Bo-2wj" id="lAa-RT-UT4"/>
+                        <outlet property="changeDegreeLabel" destination="71i-KT-R0f" id="F1k-S2-oZf"/>
+                        <outlet property="cityTextField" destination="fTw-7y-Vep" id="FFK-ZJ-0O2"/>
                         <outlet property="currentCityLabel" destination="lhn-WH-5tH" id="me9-lB-Hcn"/>
                         <outlet property="humidityLabel" destination="QBR-3e-p4V" id="noY-5r-8wI"/>
+                        <outlet property="mainInfoStackView" destination="wM5-TL-8wY" id="EMW-9a-jjj"/>
+                        <outlet property="pressureLabel" destination="T1w-0c-aYs" id="IhB-g5-kEs"/>
                         <outlet property="rainLabel" destination="egv-a9-yce" id="60w-a4-cqU"/>
                         <outlet property="weatherDescription" destination="2i2-lo-z1m" id="caG-4D-mra"/>
                         <outlet property="weatherImage" destination="X9J-f5-GMG" id="cLg-ho-7qW"/>

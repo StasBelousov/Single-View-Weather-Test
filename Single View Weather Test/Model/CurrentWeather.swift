@@ -45,9 +45,9 @@ struct CurrentWeather {
     }
     let pressureH2O: Int
     var pressureHgString: String {
-        return String(Int((Double(pressureH2O))/13.595098063*10)) + " мм. рт. ст."
+        return String(format: "%.0f", (Double(pressureH2O))/13.595098063*10) + " мм. рт. ст."
     }
-    let windSpeed: Int
+    let windSpeed: Double
     var windSpeedString: String {
         return String(windSpeed) + " м/с, "
     }
@@ -59,18 +59,6 @@ struct CurrentWeather {
         case 135...224: return "южный"
         case 225...314: return "западный"
         case 315...360: return "северный"
-        default: return "-"
-        }
-    }
-    var rain: String {
-        switch conditionCode {
-        case 200...232: return "100%"
-        case 300...321: return "80%"
-        case 500...531: return "70%"
-        case 600...622: return "100%"
-        case 701...781: return "20%"
-        case 800: return "0%"
-        case 801...804: return "10%"
         default: return "-"
         }
     }

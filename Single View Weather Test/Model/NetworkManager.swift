@@ -11,6 +11,7 @@ import CoreLocation
 
 protocol NetworkManagerDelegate: class {
     func updateInteface (_:NetworkManager, with currentWeather: CurrentWeather)
+    func updateRain (_:NetworkManager, with currentWeatherRain: CurrentWeatherRain)
 }
 
 class NetworkManager {
@@ -27,9 +28,11 @@ class NetworkManager {
         var urlString = ""
         switch requestType {
         case .cityName(let city): urlString = "https://api.openweathermap.org/data/2.5/weather?q=\(city)&apikey=\(apiKey)&units=metric&lang=\(language)"
+        print(urlString)
             
         case .coordinate(let latitude, let longitude):
             urlString = "https://api.openweathermap.org/data/2.5/weather?lat=\(latitude)&lon=\(longitude)&apikey=\(apiKey)&units=metric&lang=\(language)"
+            print(urlString)
         }
         performRequest(withURLString: urlString.encodeUrl)
     }
@@ -43,6 +46,9 @@ class NetworkManager {
                 if let data = data {
                     if let currentWeather = self.JSONdecoder(withData: data) {
                         self.delegate?.updateInteface(self, with: currentWeather)
+                    };
+                    if let currentWeatherRain = self.JSONdecoderRain(withData: data) {
+                        self.delegate?.updateRain(self, with: currentWeatherRain)
                     };
                 }
             }
@@ -59,6 +65,19 @@ class NetworkManager {
             
         } catch let error as NSError {
             print(error.localizedDescription)
+        }
+        return nil
+    }
+    func JSONdecoderRain(withData data: Data) -> CurrentWeatherRain? {
+        let decoder = JSONDecoder()
+        do {
+            let currentWeatherDataRain = try decoder.decode(WeatherDataRain.self, from: data)
+            guard let currentWeatherRain = CurrentWeatherRain(currentWeatherDataRain: currentWeatherDataRain) else { return nil }
+            return currentWeatherRain
+            
+        } catch let error as NSError {
+            print(error.localizedDescription)
+            print("---NO Rain---")
         }
         return nil
     }

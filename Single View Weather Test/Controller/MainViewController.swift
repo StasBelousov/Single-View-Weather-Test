@@ -47,7 +47,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         get { weatherDescription.text }
         set { weatherDescription.text = newValue }
     }
-    var celsiumAndFarengeight: [String] = []
+    var celsiumAndFarengeight: [String] = ["0","0"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -146,7 +146,14 @@ extension MainViewController: NetworkManagerDelegate {
             self.windLabel.text = currentWeather.windSpeedString + currentWeather.windDegreeString
             self.humidityLabel.text = currentWeather.humidityString
             self.pressureLabel.text = currentWeather.pressureHgString
-            self.rainLabel.text = currentWeather.rain
+            self.rainLabel.text = "0%"
+        }
+    }
+    func updateRain(_: NetworkManager, with currentWeatherRain: CurrentWeatherRain) {
+        print(currentWeatherRain)
+        
+        DispatchQueue.main.async {
+            self.rainLabel.text = currentWeatherRain.rainString
         }
     }
 }

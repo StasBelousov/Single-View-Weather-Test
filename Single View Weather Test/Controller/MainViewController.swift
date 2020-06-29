@@ -70,10 +70,15 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         weatherTemp.text = celsiumAndFarengeight[segmentIndex]
     }
     @IBAction func changeCityTextField(_ sender: Any) {
-        guard let city = cityTextField.text else { return }
+        guard var city = cityTextField.text else { return }
         
         if city.count != 0 {
-            networkManager.fetchCurrentWeather(forRequestType:.cityName(city: city), language: "ru")
+            if city.last == " " {
+                city.removeLast()
+            }
+            let replaced = city.replacingOccurrences(of: " ", with: "-")
+            
+            networkManager.fetchCurrentWeather(forRequestType:.cityName(city: replaced), language: "ru")
             cityTextField.text = ""
         }
     }
